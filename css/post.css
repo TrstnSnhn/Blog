@@ -1,0 +1,58 @@
+body {
+    background-color: #121212; 
+    color: #e0e0e0; 
+}
+
+.container {
+    max-width: 800px;
+}
+
+h1, h2 {
+    color: #ffffff; 
+}
+
+.post p {
+    text-align: justify; 
+    margin-bottom: 20px; 
+}
+
+img {
+    width: 100%;
+    height: 500px;
+    display: block;
+    margin: 0 auto 20px auto;
+}
+
+.grounding{
+    width: 50%;
+    height: 50%;
+    display: block;
+    margin: 0 auto 20px auto;
+}
+
+.references, .footnotes, .bibliography {
+    margin-top: 2rem;
+}
+
+.references h2, .footnotes h2, .bibliography h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.references ol, .footnotes ol, .bibliography ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.references li, .footnotes li, .bibliography li {
+    margin-bottom: 1rem;
+}
+
+.references a, .footnotes a, .bibliography a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.references a:hover, .footnotes a:hover, .bibliography a:hover {
+    text-decoration: underline;
+}
