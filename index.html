@@ -3,100 +3,184 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - Growth Horizon</title>
-    <!-- Link Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <!-- Link to the custom dark theme CSS -->
+    <meta name="description" content="Growth Horizon is a modernized student blog about self-awareness, resilience, working student life, and personal growth.">
+    <title>Growth Horizon | Student stories on personal growth</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/site.js" defer></script>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <nav class="navbar" aria-label="Main navigation">
         <div class="container">
             <a class="navbar-brand" href="index.html">Growth Horizon</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.html">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="members.html">Members</a>
-                    </li>
+            <div class="navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li><a class="nav-link" href="index.html">Home</a></li>
+                    <li><a class="nav-link" href="about.html">About</a></li>
+                    <li><a class="nav-link" href="members.html">Members</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Main Content -->
-    <div class="container">
-        <!-- Post Grid -->
-        <div class="post-grid">
-            <a href="post1.html">
-                <div class="post">
-                    <h2>From Full-Time Student to Working Student: How the Pandemic Changed My Life</h2>
-                    <p>by Angelo Tristan Sinohin</p>
+    <main id="main-content" class="site-main">
+        <section class="container hero" aria-labelledby="home-title">
+            <div class="hero-copy">
+                <p class="eyebrow">Modernized high school blog project</p>
+                <h1 id="home-title">Growth Horizon</h1>
+                <p class="hero-text">Student-written reflections about discipline, self-awareness, setbacks, and the lessons that shape personal development.</p>
+                <div class="hero-actions">
+                    <a class="button-link" href="#stories">Browse stories</a>
+                    <a class="text-link" href="about.html">Read the project background</a>
                 </div>
-            </a>
-            <a href="post2.html">
-                <div class="post">
-                    <h2>From Fumbles to Triumphs: Mastering the Art of Turning Setbacks into Comebacks</h2>
-                    <p>by Vanderlei B. Mendoza</p>
-                </div>
-            </a>
-            <a href="post3.html">
-                <div class="post">
-                    <h2>Breaking Free: How to Overcome Negative Thought Patterns and Reclaim Your Peace</h2>
-                    <p>by Guillermo Gabriel T. Suyan</p>
-                </div>
-            </a>
+            </div>
 
-            <div class="main-post">
-                <a href="main-post.html">
-                    <img src="assets/9.jfif" alt="Main Post Image" class="mainpic">
-                    <article class="post">
-                        <h2>Overcoming Self-Deception: How to See Yourself More Clearly</h2>
-                        <p>by Gabriel Ocampo</p>
-                    </article>
+            <a class="featured-card" href="main-post.html" aria-label="Read featured story: Overcoming Self-Deception">
+                <img src="assets/9.jfif" alt="Person looking into a mirror as a symbol of self-reflection">
+                <div class="featured-card-body">
+                    <div class="meta-row">
+                        <span class="tag">Featured</span>
+                        <span>Self-awareness</span>
+                        <span>Oct 2024</span>
+                    </div>
+                    <h2>Overcoming Self-Deception: How to See Yourself More Clearly</h2>
+                    <p>A practical look at recognizing blind spots, seeking honest feedback, and building a clearer relationship with yourself.</p>
+                </div>
+            </a>
+        </section>
+
+        <section class="container" id="stories" aria-labelledby="stories-title">
+            <div class="section-header">
+                <div>
+                    <p class="eyebrow">Latest reflections</p>
+                    <h2 id="stories-title">Blog library</h2>
+                </div>
+                <p>Search by topic, author, or title. The posts stay simple, but the browsing experience now feels intentional and easier to scan.</p>
+            </div>
+
+            <div class="post-toolbar" role="search" aria-label="Search and filter stories">
+                <div class="search-field">
+                    <label for="postSearch">Search stories</label>
+                    <input id="postSearch" type="search" placeholder="Try resilience, mindfulness, or working student">
+                </div>
+                <div class="filter-group" role="group" aria-label="Filter stories by category">
+                    <button class="filter-button" type="button" data-filter="all" aria-pressed="true">All</button>
+                    <button class="filter-button" type="button" data-filter="student-life" aria-pressed="false">Student life</button>
+                    <button class="filter-button" type="button" data-filter="mindset" aria-pressed="false">Mindset</button>
+                    <button class="filter-button" type="button" data-filter="wellbeing" aria-pressed="false">Wellbeing</button>
+                </div>
+            </div>
+
+            <p class="post-count" id="postCount" aria-live="polite">7 stories</p>
+
+            <div class="post-grid">
+                <a class="post-card is-wide" href="post1.html" data-post-card data-title="From Full-Time Student to Working Student" data-tags="student-life work pandemic responsibility" data-author="Angelo Tristan Sinohin">
+                    <img src="assets/11.jpg" alt="Student workspace representing the shift to remote learning and work">
+                    <div class="post-card-body">
+                        <div class="meta-row">
+                            <span class="tag">Student life</span>
+                            <span>Sep 2024</span>
+                        </div>
+                        <h3>From Full-Time Student to Working Student</h3>
+                        <p>How the pandemic changed one student's schedule, priorities, and view of responsibility.</p>
+                        <span class="read-more">Read story</span>
+                    </div>
+                </a>
+
+                <a class="post-card is-wide" href="post2.html" data-post-card data-title="From Fumbles to Triumphs" data-tags="mindset resilience fitness comeback" data-author="Vanderlei B. Mendoza">
+                    <img src="assets/post2.jpg" alt="Fitness setting that represents rebuilding momentum after a setback">
+                    <div class="post-card-body">
+                        <div class="meta-row">
+                            <span class="tag">Mindset</span>
+                            <span>Sep 2024</span>
+                        </div>
+                        <h3>From Fumbles to Triumphs</h3>
+                        <p>A reflection on setbacks, recovery, and turning interrupted progress into a stronger comeback.</p>
+                        <span class="read-more">Read story</span>
+                    </div>
+                </a>
+
+                <a class="post-card" href="post3.html" data-post-card data-title="Breaking Free" data-tags="wellbeing mindset mental-health peace" data-author="Guillermo Gabriel T. Suyan">
+                    <img src="assets/1.jfif" alt="Quiet scene representing reflection and emotional recovery">
+                    <div class="post-card-body">
+                        <div class="meta-row">
+                            <span class="tag">Wellbeing</span>
+                            <span>Oct 2024</span>
+                        </div>
+                        <h3>Breaking Free</h3>
+                        <p>A personal story about recognizing negative thought patterns and learning healthier responses.</p>
+                        <span class="read-more">Read story</span>
+                    </div>
+                </a>
+
+                <a class="post-card is-highlight" href="main-post.html" data-post-card data-title="Overcoming Self-Deception" data-tags="mindset wellbeing self-awareness feedback" data-author="Gabriel Ocampo">
+                    <img src="assets/9.jfif" alt="Mirror image symbolizing self-awareness and personal honesty">
+                    <div class="post-card-body">
+                        <div class="meta-row">
+                            <span class="tag">Mindset</span>
+                            <span>Oct 2024</span>
+                        </div>
+                        <h3>Overcoming Self-Deception</h3>
+                        <p>How honest reflection and feedback can help us see ourselves more clearly.</p>
+                        <span class="read-more">Read story</span>
+                    </div>
+                </a>
+
+                <a class="post-card" href="post4.html" data-post-card data-title="Empower Yourself" data-tags="mindset discipline motivation fitness" data-author="France Miclat">
+                    <img src="assets/10.jpg" alt="Person training as a symbol of discipline and personal growth">
+                    <div class="post-card-body">
+                        <div class="meta-row">
+                            <span class="tag">Mindset</span>
+                            <span>Oct 2024</span>
+                        </div>
+                        <h3>Empower Yourself</h3>
+                        <p>A student reflection on discipline, finding purpose, and rebuilding confidence through effort.</p>
+                        <span class="read-more">Read story</span>
+                    </div>
+                </a>
+
+                <a class="post-card is-wide" href="post5.html" data-post-card data-title="Very Mindful" data-tags="wellbeing mindfulness grounding stress" data-author="Kiara Mariz B. Laxamana">
+                    <img src="assets/7.jfif" alt="Calm outdoor scene representing mindfulness and grounding">
+                    <div class="post-card-body">
+                        <div class="meta-row">
+                            <span class="tag">Wellbeing</span>
+                            <span>Nov 2024</span>
+                        </div>
+                        <h3>Very Mindful</h3>
+                        <p>An introduction to grounding techniques for staying present during stressful seasons.</p>
+                        <span class="read-more">Read story</span>
+                    </div>
+                </a>
+
+                <a class="post-card is-wide" href="post6.html" data-post-card data-title="A Hustle and Bustle Life" data-tags="student-life pandemic balance school work" data-author="John Aldrin Manaloto">
+                    <img src="assets/2.jfif" alt="Busy student life scene representing school and work responsibilities">
+                    <div class="post-card-body">
+                        <div class="meta-row">
+                            <span class="tag">Student life</span>
+                            <span>Nov 2024</span>
+                        </div>
+                        <h3>A Hustle and Bustle Life</h3>
+                        <p>A candid look at balancing school, work, and personal life after the pandemic.</p>
+                        <span class="read-more">Read story</span>
+                    </div>
                 </a>
             </div>
 
-            <a href="post4.html">
-                <div class="post">
-                    <h2>Empower Yourself: Never Back Down, Never Give Up</h2>
-                    <p>by France Miclat</p>
-                </div>
-            </a>
-            <a href="post5.html">
-                <div class="post">
-                    <h2>Very Mindful: A Demure Introduction to Grounding</h2>
-                    <p>by Kiara Mariz B. Laxamana</p>
-                </div>
-            </a>
-            <a href="post6.html">
-                <div class="post">
-                    <h2>A Hustle and Bustle Life</h2>
-                    <br><br>
-                    <p>by John Aldrin Manaloto</p>
+            <div class="empty-state" id="emptyState" hidden>
+                <p>No stories match that search. Try a broader topic or clear the filter.</p>
+            </div>
+        </section>
+    </main>
 
-                </div>
-            </a>
-        </div>
-    </div>
-
-    <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Growth Horizon. All rights reserved.</p>
+        <div class="container">
+            <p>&copy; 2024 Growth Horizon. Modernized as a portfolio-ready static blog.</p>
+            <a href="about.html">Project background</a>
+        </div>
     </footer>
-
-    <!-- Bootstrap JS and dependencies -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
